@@ -4,23 +4,10 @@ import { PaymentType } from "../../data/DataFunctions";
 
 const Country = () : JSX.Element => {
 
-    // const initialList : PaymentType[] = [
-    //     {
-    //          //list of countries
-            
-    //     }
-    // ]
     const [userSelectedCountry, setCountry] = useState<string> ("");
  
-    const options = [
-        
-             //list of countries
-             {value: 'USA', label: 'USA'},
-             {value: 'SWE', label: 'SWE'},
-             {value: 'FRA', label: 'FRA'}
-            
-        
-    ]
+    const payments : PaymentType[] = getAllPayments();
+    const options : PaymentType[] = Array.from(new Set(payments));
 
 
     const handleChange = (event: any) : void => {
@@ -35,7 +22,7 @@ const Country = () : JSX.Element => {
         <p>Select country: </p>
         <select onChange={handleChange}>
             {options.map((option) => (
-            <option key={option.value} value={option.label} >{option.label}</option>))}
+            <option key={option.country} value={option.country} >{option.country}</option>))}
         </select>
         
         </>

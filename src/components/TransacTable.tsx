@@ -1,3 +1,5 @@
+import { getAllPayments } from "../data/DataFunctions";
+
 const TransacTable = () : JSX.Element => {
     const dummyData = [
         {id: "123", date: "11-1-2024", country: "USA", currency: "usd", amount: 777},
@@ -11,12 +13,14 @@ const TransacTable = () : JSX.Element => {
             <table>
                 <tr>
                     <th>ID</th>
+                    <th>orderId</th>
                     <th>Date</th>
                     <th>Country</th>
                     <th>Currency</th>
                     <th>Amount</th>
                 </tr>
-                {dummyData.map((val, key) => { // for each key map this value
+                
+                {dummyData.map((val, key) => { // for each key map this value make this stateful
                     return (
                         <tr key={key}>
                             <td>{val.id}</td>

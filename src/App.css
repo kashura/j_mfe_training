@@ -36,14 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.headerStyle {
-  background: #FFD580;
-  /* text-align: left; */
-  display: flex;
-  justify-content : space-between;
-};
-
-.nav li a{
-  background-color: white;
-}

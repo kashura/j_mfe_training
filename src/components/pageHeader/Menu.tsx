@@ -1,6 +1,6 @@
 const Menu = () : JSX.Element => {
     return (
-        <ul className="navPages">
+        <ul className="nav">
             <li>Find a transaction</li>
             <li>New transaction</li>
         </ul>

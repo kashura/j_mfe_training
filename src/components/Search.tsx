@@ -1,7 +1,7 @@
 const Search = () : JSX.Element => {
     return(
         <>
-            <p>Order ID: </p>
+            <label>Order ID: </label> 
             <input id="userInput"></input>
             <button>Search</button>
         </>
